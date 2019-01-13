@@ -37,6 +37,11 @@ public class CarFactoryWithReflectionDemo {
       this.registeredCarTypes.put(type, carClass);
     }
 
+    // for testing purpose
+    void unregisterCars() {
+      this.registeredCarTypes.clear();
+    }
+
     public Car createCar(CarType type) {
       if (type == null) {
         throw new IllegalArgumentException("type cannot be null");

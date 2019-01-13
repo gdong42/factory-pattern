@@ -8,6 +8,7 @@ import info.donggan.patterns.factory.model.BmwCar;
 import info.donggan.patterns.factory.model.CarType;
 import info.donggan.patterns.factory.model.TeslaCar;
 import info.donggan.patterns.factory.model.VolvoCar;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -16,6 +17,11 @@ import org.junit.Test;
  * @author Gan Dong
  */
 public class CarFactoryWithReflectionTest {
+
+  @Before
+  public void setUp() {
+    CarFactoryWithReflection.instance().unregisterCars();
+  }
 
   @Test
   public void testCreateCarWithBmwType() {
