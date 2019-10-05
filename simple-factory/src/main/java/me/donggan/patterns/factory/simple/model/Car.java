@@ -9,7 +9,8 @@ public interface Car {
 
   void drive();
 
-  // only required by CarFactoryWithoutReflectionDemo
+  // only required by CarFactoryWithoutReflectionDemo.
+  // A variation of "Factory Method"
   Car create();
 
 }
