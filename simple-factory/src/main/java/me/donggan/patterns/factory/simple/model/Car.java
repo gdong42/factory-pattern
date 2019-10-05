@@ -1,4 +1,4 @@
-package info.donggan.patterns.factory.model;
+package me.donggan.patterns.factory.simple.model;
 
 /**
  * Date: 2018/12/12 Time: 10:56 PM

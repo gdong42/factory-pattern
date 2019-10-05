@@ -1,10 +1,10 @@
-package info.donggan.patterns.factory;
+package me.donggan.patterns.factory.simple;
 
-import info.donggan.patterns.factory.model.BmwCar;
-import info.donggan.patterns.factory.model.Car;
-import info.donggan.patterns.factory.model.CarType;
-import info.donggan.patterns.factory.model.TeslaCar;
-import info.donggan.patterns.factory.model.VolvoCar;
+import me.donggan.patterns.factory.simple.model.BmwCar;
+import me.donggan.patterns.factory.simple.model.Car;
+import me.donggan.patterns.factory.simple.model.CarType;
+import me.donggan.patterns.factory.simple.model.TeslaCar;
+import me.donggan.patterns.factory.simple.model.VolvoCar;
 import java.lang.reflect.Constructor;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

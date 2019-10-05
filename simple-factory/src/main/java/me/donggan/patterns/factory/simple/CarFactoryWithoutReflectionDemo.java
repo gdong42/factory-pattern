@@ -1,7 +1,7 @@
-package info.donggan.patterns.factory;
+package me.donggan.patterns.factory.simple;
 
-import info.donggan.patterns.factory.model.Car;
-import info.donggan.patterns.factory.model.CarType;
+import me.donggan.patterns.factory.simple.model.Car;
+import me.donggan.patterns.factory.simple.model.CarType;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -47,9 +47,9 @@ public class CarFactoryWithoutReflectionDemo {
     // make sure car type is registered to the factory before creating cars
     static {
       try {
-        Class.forName("info.donggan.patterns.factory.model.BmwCar");
-        Class.forName("info.donggan.patterns.factory.model.VolvoCar");
-        Class.forName("info.donggan.patterns.factory.model.TeslaCar");
+        Class.forName("me.donggan.patterns.factory.simple.model.BmwCar");
+        Class.forName("me.donggan.patterns.factory.simple.model.VolvoCar");
+        Class.forName("me.donggan.patterns.factory.simple.model.TeslaCar");
       } catch (ClassNotFoundException cnfe) {
         cnfe.printStackTrace();
       }

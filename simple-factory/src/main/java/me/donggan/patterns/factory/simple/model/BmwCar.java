@@ -1,6 +1,6 @@
-package info.donggan.patterns.factory.model;
+package me.donggan.patterns.factory.simple.model;
 
-import info.donggan.patterns.factory.CarFactoryWithoutReflectionDemo.CarFactoryWithoutReflection;
+import me.donggan.patterns.factory.simple.CarFactoryWithoutReflectionDemo.CarFactoryWithoutReflection;
 
 /**
  * Date: 2018/12/12 Time: 10:57 PM

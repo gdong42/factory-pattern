@@ -1,13 +1,13 @@
-package info.donggan.patterns.factory;
+package me.donggan.patterns.factory.simple;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
-import info.donggan.patterns.factory.CarFactoryWithReflectionDemo.CarFactoryWithReflection;
-import info.donggan.patterns.factory.model.BmwCar;
-import info.donggan.patterns.factory.model.CarType;
-import info.donggan.patterns.factory.model.TeslaCar;
-import info.donggan.patterns.factory.model.VolvoCar;
+import me.donggan.patterns.factory.simple.CarFactoryWithReflectionDemo.CarFactoryWithReflection;
+import me.donggan.patterns.factory.simple.model.BmwCar;
+import me.donggan.patterns.factory.simple.model.CarType;
+import me.donggan.patterns.factory.simple.model.TeslaCar;
+import me.donggan.patterns.factory.simple.model.VolvoCar;
 import org.junit.Before;
 import org.junit.Test;
 
