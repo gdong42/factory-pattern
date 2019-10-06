@@ -10,4 +10,4 @@ dependencies {
     )
 }
 
-mainClassName = 'me.donggan.patterns.factory.simple.SimpleCarFactoryDemo'
+mainClassName = 'me.donggan.patterns.factory.method.FactoryMethodDemo'
