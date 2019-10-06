@@ -13,6 +13,17 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class CarFactoryWithoutReflectionDemo {
 
+  // make sure car type is registered to the factory before creating cars
+  static {
+    try {
+      Class.forName("me.donggan.patterns.factory.simple.model.BmwCar");
+      Class.forName("me.donggan.patterns.factory.simple.model.VolvoCar");
+      Class.forName("me.donggan.patterns.factory.simple.model.TeslaCar");
+    } catch (ClassNotFoundException cnfe) {
+      cnfe.printStackTrace();
+    }
+  }
+
   public static class CarFactoryWithoutReflection {
 
     private Map<CarType, Car> registeredCars = new ConcurrentHashMap<>();
@@ -43,30 +54,19 @@ public class CarFactoryWithoutReflectionDemo {
       }
       return car.create();
     }
-
-    // make sure car type is registered to the factory before creating cars
-    static {
-      try {
-        Class.forName("me.donggan.patterns.factory.simple.model.BmwCar");
-        Class.forName("me.donggan.patterns.factory.simple.model.VolvoCar");
-        Class.forName("me.donggan.patterns.factory.simple.model.TeslaCar");
-      } catch (ClassNotFoundException cnfe) {
-        cnfe.printStackTrace();
-      }
-    }
-
-    public static void main(String[] args) {
-
-      Car car1 = CarFactoryWithoutReflection.instance().createCar(CarType.BMW);
-      car1.drive();
-
-      Car car2 = CarFactoryWithoutReflection.instance().createCar(CarType.VOLVO);
-      car2.drive();
-
-      Car car3 = CarFactoryWithoutReflection.instance().createCar(CarType.TESLA);
-      car3.drive();
-    }
-
   }
+
+  public static void main(String[] args) {
+
+    Car car1 = CarFactoryWithoutReflection.instance().createCar(CarType.BMW);
+    car1.drive();
+
+    Car car2 = CarFactoryWithoutReflection.instance().createCar(CarType.VOLVO);
+    car2.drive();
+
+    Car car3 = CarFactoryWithoutReflection.instance().createCar(CarType.TESLA);
+    car3.drive();
+  }
+
 
 }

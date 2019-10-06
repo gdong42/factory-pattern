@@ -59,26 +59,25 @@ public class CarFactoryWithReflectionDemo {
             "Car of type " + type + " cannot be instantiated", e);
       }
     }
+  }
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-      CarFactoryWithReflection.instance()
-          .registerCar(CarType.BMW, BmwCar.class);
-      CarFactoryWithReflection.instance()
-          .registerCar(CarType.VOLVO, VolvoCar.class);
-      CarFactoryWithReflection.instance()
-          .registerCar(CarType.TESLA, TeslaCar.class);
+    CarFactoryWithReflection.instance()
+        .registerCar(CarType.BMW, BmwCar.class);
+    CarFactoryWithReflection.instance()
+        .registerCar(CarType.VOLVO, VolvoCar.class);
+    CarFactoryWithReflection.instance()
+        .registerCar(CarType.TESLA, TeslaCar.class);
 
-      Car car1 = CarFactoryWithReflection.instance().createCar(CarType.BMW);
-      car1.drive();
+    Car car1 = CarFactoryWithReflection.instance().createCar(CarType.BMW);
+    car1.drive();
 
-      Car car2 = CarFactoryWithReflection.instance().createCar(CarType.VOLVO);
-      car2.drive();
+    Car car2 = CarFactoryWithReflection.instance().createCar(CarType.VOLVO);
+    car2.drive();
 
-      Car car3 = CarFactoryWithReflection.instance().createCar(CarType.TESLA);
-      car3.drive();
-    }
-
+    Car car3 = CarFactoryWithReflection.instance().createCar(CarType.TESLA);
+    car3.drive();
   }
 
 }
